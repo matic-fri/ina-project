@@ -1,0 +1,231 @@
+﻿Importers	Select your indicators-Value exported in 2021 (USD thousand)	Select your indicators-Trade balance 2021 (USD thousand)	Select your indicators-Share in Zambia's exports (%)	Select your indicators-Growth in exported value between 2017-2021 (%, p.a.)	Select your indicators-Growth in exported value between 2020-2021 (%, p.a.)	Select your indicators-Ranking of partner countries in world imports	Select your indicators-Share of partner countries in world imports (%)	Select your indicators-Total imports growth in value of partner countries between 2017-2021 (%, p.a.)	Select your indicators-Average distance between partner countries and all their supplying markets (km)	Select your indicators-Concentration of all supplying countries of partner countries	Select your indicators-Average tariff (estimated) faced by Zambia (%)	
+"World"	11217517	4105992	100	5	39		100	3				
+"Switzerland"	4723507	4706007	42.1	5	32	20	1.5	4	3384	0.07		
+"China"	2098993	1202676	18.7	11	41	2	11.1	5	6416	0.04		
+"Singapore"	1505880	1476992	13.4	28	61	16	1.9	3	5773	0.07		
+"Congo, Democratic Republic of the"	1121576	806609	10	18	13	111	0.04	13	6479	0.14		
+"South Africa"	288754	-1955195	2.6	-15	42	41	0.4	-1	9230	0.07		
+"Luxembourg"	244814	243450	2.2	41	122	71	0.1	3	1488	0.14		
+"Zimbabwe"	198558	118341	1.8	5	88	134	0.02	7	3754	0.39		
+"Malawi"	125375	107122	1.1	7	16	168	0	0	5169	0.15		
+"Hong Kong, China"	106778	64646	1	-15	107	5	3.3	3	2841	0.22		
+"India"	98638	-343105	0.9	-24	153	10	2.6	2	5793	0.05		
+"Namibia"	94026	-36327	0.8	46	40	126	0.03	-1	3757	0.37		
+"Tanzania, United Republic of"	88076	31929	0.8	-4	45	102	0.05	7	6633	0.1		
+"Botswana"	54314	33733	0.5	10	123	124	0.03	2	2968	0.52		
+"Italy"	53015	19479	0.5	105	138	11	2.5	2	2891	0.06		
+"Kenya"	50748	-7672	0.5	-10	24	80	0.09	2	6680	0.08		
+"United States of America"	41512	-172889	0.4	70	75	1	13.4	3	7938	0.08		
+"United Arab Emirates"	32053	-770378	0.3	-49	34	29	0.9	-2	5715	0.08		
+"Burundi"	29106	28990	0.3	6	17	188	0	13	4755	0.14		
+"Mozambique"	27956	-31457	0.2	14	47	108	0.04	8	6196	0.1		
+"Mauritius"	23432	-89718	0.2	80	1199	133	0.02	-2	7320	0.08		
+"Germany"	22270	-70962	0.2	15	67	3	6.5	3	3376	0.05		
+"Belgium"	19036	-30728	0.2	42	45	12	2.4	3	2709	0.08		
+"Netherlands"	18901	-43948	0.2	20	65	8	2.8	5	3706	0.07		
+"Uganda"	17790	9516	0.2	30	131	132	0.02	11	5788	0.09		
+"Pakistan"	16808	7075	0.1	1492	727	47	0.3	2	4850	0.11		
+"Spain"	15359	-15922	0.1	177	302	15	1.9	3	3890	0.05		
+"Viet Nam"	12336	-1934	0.1	177	80	19	1.5	8	3535	0.19		
+"United Kingdom"	12264	-98257	0.1	-60	29	7	3.2	1	3930	0.06		
+"Rwanda"	10526	9067	0.1	-26	6	159	0.01	17	5437	0.08		
+"Congo"	9390	9344	0.1	25	318	154	0.01	-18	6851	0.07		
+"Nigeria"	7060	6381	0.1	58	1450	53	0.2	17	7792	0.1		
+"Austria"	5611	2429	0.1	102	205	27	1	3	1514	0.18		
+"Chile"	3131	-30112	0	435	183949	43	0.4	6	11582	0.13		
+"Russian Federation"	2911	-16027	0	111	256	21	1.3	5	4187	0.09		
+"Angola"	2890	224	0	-4	72	100	0.05	-11	7692	0.06		
+"Eswatini"	2525	-19798	0	-17	13	160	0	1	1597	0.74		
+"Turkey"	2354	-29023	0	343	703	22	1.2	3	4285	0.05		
+"Ghana"	2254	1565	0	70	28	82	0.08	8	8888	0.18		
+"Egypt"	2132	-12089	0	250	347	46	0.3	-1	5219	0.05		
+"Poland"	2114	-4369	0	105	150	18	1.5	8	3121	0.08		
+"Japan"	1993	-248890	0	-60	185	4	3.5	1	6256	0.09		
+"Panama"	1775	1652	0	18	361	60	0.2	1	8657	0.12		
+"Sweden"	1346	-35584	0	21	-19	31	0.9	3	2128	0.07		
+"Bahrain"	1312	-667	0	370	512	101	0.05	1	6359	0.08		
+"Honduras"	1279	1200	0			99	0.05	4	6104	0.16		
+"Korea, Democratic People's Republic of"	1218	-5045	0	152	53939	200	0	-49	1470	0.87		
+"France"	1217	-39879	0	6	42	6	3.2	1	3195	0.06		
+"Denmark"	1040	-20714	0	16	-38	35	0.6	5	2182	0.08		
+"Finland"	849	-46367	0	45	23	44	0.4	3	2842	0.07		
+"Norway"	845	-621	0	24	124	39	0.5	3	3470	0.06		
+"Canada"	764	-10194	0	10	-62	14	2.2	1	5042	0.26		
+"Australia"	763	-57869	0	-20	-37	24	1.1	1	10262	0.1		
+"Malaysia"	762	-90635	0	23	32	25	1.1	3	5172	0.09		
+"Lesotho"	606	322	0	-3	-76	164	0	-2	1590	0.78		
+"Libya, State of"	575	575	0			89	0.07	12	3475	0.08		
+"Indonesia"	567	-31571	0	66	1959	30	0.9	2	5872	0.11		
+"Jordan"	508	478	0		5726	84	0.08	0	5167	0.07		
+"Algeria"	497	497	0		-79	64	0.2	-8	4584	0.07		
+"Thailand"	463	-20965	0	54	9	23	1.2	2	4905	0.09		
+"Area Nes"	450	450	0	-85	29							
+"Israel"	446	-15169	0	-7	223	42	0.4	4	5483	0.07		
+"Portugal"	375	-358	0	25	36450	40	0.4	2	2788	0.14		
+"Chad"	297	294	0			184	0	13	6931	0.16		
+"Madagascar"	244	243	0	55	-93	138	0.02	2	7339	0.08		
+"Philippines"	187	-349	0	-11	595	34	0.6	2	4354	0.09		
+"Saudi Arabia"	174	-48888	0	46	3220	32	0.7	3	5816	0.07		
+"Myanmar"	154	154	0	354	224	79	0.10	-1	2536	0.25		
+"Mexico"	150	-7937	0	216	-82	13	2.3	2	7039	0.24		
+"Georgia"	137	-901	0			113	0.04	-2	2513	0.09		
+"Lebanon"	134	-3867	0	80	2684	97	0.06	-12	3592	0.06		
+"Hungary"	130	-942	0	83	-12	33	0.6	6	2180	0.09		
+"Burkina Faso"	123	104	0		-27	136	0.02	5	6109	0.05		
+"Ukraine"	122	-5600	0		-68	48	0.3	7	3255	0.06		
+"Senegal"	116	-194	0	68	157	110	0.04	4	6632	0.05		
+"Croatia"	115	90	0		-71	63	0.2	6	1362	0.07		
+"Ethiopia"	94	-1772	0	-46	25	90	0.07	1	6305	0.11		
+"Seychelles"	85	-48	0	19		187	0	-7	6627	0.06		
+"Gabon"	79	-573	0		-68	158	0.01	-2	7114	0.11		
+"Bulgaria"	77	-1130	0	-11	-85	57	0.2	6	2237	0.05		
+"Mali"	76	49	0	-28	573	141	0.02	9	5008	0.1		
+"British Virgin Islands"	66	66	0			156	0.01	8	7242	0.27		
+"New Zealand"	52	-2239	0	-33	63	56	0.2	3	11141	0.09		
+"Czech Republic"	52	-2978	0	-29		28	1	4	2987	0.1		
+"Brazil"	49	-17800	0	-65	436	26	1	6	10879	0.09		
+"Serbia"	48	-109	0			65	0.2	9	2497	0.06		
+"Romania"	38	-565	0	-12	-6	37	0.5	6	1891	0.07		
+"Central African Republic"	33	-20	0	-22	-99	199	0	7	6606	0.08		
+"Sri Lanka"	28	-503	0	13	822	85	0.08	-3	4351	0.16		
+"Côte d'Ivoire"	26	-450	0	47	-38	93	0.06	9	6793	0.08		
+"Curaçao"	24	14	0			163	0	-12		0.24		
+"Qatar"	24	-39615	0	345	-99	70	0.1	0	5745	0.06		
+"Taipei, Chinese"	23	-7230	0	-7	-62	17	1.7	8	5007	0.1		
+"Guinea"	17	17	0		34	135	0.02	7	9140	0.19		
+"Cabo Verde"	16	16	0		-65	181	0	4	5196	0.21		
+"Sierra Leone"	14	-470	0	51	72	170	0	10	8820	0.13		
+"Tunisia"	12	-294	0		193	78	0.10	-1	3411	0.06		
+"Korea, Republic of"	10	-55056	0	-75	-97	9	2.8	4	5699	0.09		
+"Liberia"	9	4	0	-38		87	0.07	17	11608	0.19		
+"Nepal"	8	8	0			96	0.06	8	1856	0.56		
+"Maldives"	8	8	0			151	0.01	-3	4478	0.08		
+"Sudan"	7	1	0	-72	-77	122	0.03	-2		0.13		
+"Armenia"	5	4	0		103	131	0.02	6	3323	0.15		
+"Iceland"	4	-12	0			112	0.04	-1	4251	0.05		
+"Haiti"	3	-11	0			140	0.02	0	6340	0.18		
+"Lithuania"	3	-537	0			59	0.2	7	1630	0.07		
+"Cyprus"	3	-1070	0	32	-64	105	0.05	-1	3118	0.09		
+"Slovakia"	3	-1492	0	-32	85	38	0.5	4	2664	0.07		
+"Argentina"	3	-9009	0	18	-100	50	0.3	-5	10631	0.1		
+"Gambia"	2	2	0	-46		167	0	7	8260	0.14		
+"Ecuador"	2	-47	0			69	0.1	3	9174	0.12		
+"Benin"	1	1	0	-16		149	0.01	-2	6481	0.07		
+"Cameroon"	1	-13	0	-73		116	0.03	8	7279	0.14		
+"Somalia"	1	-17	0			150	0.01	9	5305	0.16		
+"Estonia"	1	-353	0			73	0.1	6	2314	0.06		
+"Iran, Islamic Republic of"	1	-691	0	-74		72	0.1	-18	5612	0.13		
+"Bangladesh"	1	-1960	0			49	0.3	6	4172	0.15		
+"Gibraltar"		-1				114	0.03	-5	2572	0.09		
+"Moldova, Republic of"		-1				118	0.03	8	2317	0.08		
+"Lao People's Democratic Republic"		-1				129	0.02	-1	2572	0.28		
+"New Caledonia"		-1				155	0.01	-1	11471	0.2		
+"Aruba"		-1				175	0	-3	4917	0.3		
+"Belize"		-1				179	0	1	5006	0.18		
+"Solomon Islands"		-1				190	0	0	6301	0.17		
+"Saint Kitts and Nevis"		-1				201	0	-12	5440	0.41		
+"Cocos (Keeling) Islands"		-1				225	0	8		0.74		
+"Albania"		-2				121	0.03	6	1886	0.13		
+"Cayman Islands"		-2				123	0.03	5	7522	0.35		
+"Papua New Guinea"		-2				143	0.02	-1	4973	0.17		
+"Cuba"		-2				145	0.02	-13	7148	0.09		
+"Turks and Caicos Islands"		-2				193	0	-3	3491	0.74		
+"Guinea-Bissau"		-2				195	0	2	5802	0.16		
+"Brunei Darussalam"		-3				109	0.04	26	5185	0.11		
+"Syrian Arab Republic"		-3				139	0.02	-3	2496	0.27		
+"Guatemala"		-4				68	0.1	7	5828	0.15		
+"Azerbaijan"		-4				98	0.05	5	3712	0.09		
+"Falkland Islands (Malvinas)"		-4				207	0	2	12325	0.46		
+"Sao Tome and Principe"		-5				210	0	-3	6155	0.31		
+"Saint Helena"		-5				217	0	6	7699	0.31		
+"Grenada"		-8				191	0	-1	4157	0.2		
+"Djibouti"		-10				130	0.02	5	6387	0.22		
+"Bolivia, Plurinational State of"		-12				106	0.04	-3	7978	0.11		
+"Kuwait"		-13				76	0.1	-3	5837	0.07		
+"Antigua and Barbuda"		-13				174	0	1	6334	0.27		
+"Cambodia"		-14				66	0.1	16	2651	0.18		
+"Afghanistan"		-14				147	0.02	-8	2990	0.12		
+"Nicaragua"		-15				104	0.05	4	5888	0.1		
+"Costa Rica"		-21				86	0.08	3	6987	0.22		
+"Dominican Republic"		-25				67	0.1	5	6446	0.22		
+"Suriname"		-26				173	0	1	9050	0.14		
+"Niger"		-27				162	0	13	5715	0.09		
+"Jamaica"		-31				137	0.02	-2	6759	0.22		
+"Macao, China"		-46				81	0.09	15		0.17		
+"Latvia"		-54				77	0.1	7	1575	0.08		
+"Samoa"		-58				197	0	-1	6816	0.13		
+"United States Minor Outlying Islands"		-61				177	0	0		0.21		
+"Montserrat"		-80				224	0	-7		0.49		
+"Paraguay"		-91				92	0.06	0	7311	0.15		
+"Togo"		-112				153	0.01	10	7318	0.08		
+"Barbados"		-112				161	0	0	4992	0.21		
+"Mongolia"		-115				125	0.03	8	3267	0.22		
+"Venezuela, Bolivarian Republic of"		-118				117	0.03	-11	8121	0.16		
+"Turkmenistan"		-128				148	0.02	4	3495	0.15		
+"Andorra"		-154				166	0	2	610	0.52		
+"Colombia"		-164				51	0.3	4	8915	0.13		
+"Malta"		-213				120	0.03	1	3249	0.08		
+"Tokelau"		-213				226	0	-33	11566	0.22		
+"Slovenia"		-260				55	0.2	10	2404	0.07		
+"El Salvador"		-294				88	0.07	9	4914	0.15		
+"Uruguay"		-516				95	0.06	0	9836	0.11		
+"Mauritania"		-1047				146	0.02	1	5817	0.07		
+"Greece"		-1672				45	0.3	4	2847	0.05		
+"Peru"		-6766				54	0.2	3	10420	0.13		
+"Bermuda"		-7742				169	0	-3	8006	0.28		
+"Morocco"		-22935				52	0.3	4	4316	0.07		
+"Oman"		-24333				83	0.08	-6	5977	0.08		
+"Ireland"		-99096				36	0.5	4	3265	0.1		
+"Kazakhstan"						58	0.2	6	3017	0.25		
+"Belarus"						61	0.2	2	2268	0.23		
+"Iraq"						62	0.2	3	4107	0.18		
+"Uzbekistan"						74	0.1	16	3412	0.12		
+"Ship stores and bunkers"						75	0.1	-11		0.16		
+"Marshall Islands"						91	0.06	-1	7455	0.18		
+"Bosnia and Herzegovina"						94	0.06	3	2228	0.07		
+"Macedonia, North"						103	0.05	8	1348	0.09		
+"Yemen"						107	0.04	11	5706	0.11		
+"Bahamas"						115	0.03	-8	6248	0.19		
+"Kyrgyzstan"						127	0.03	1	2892	0.2		
+"Trinidad and Tobago"						128	0.03	-1	6663	0.26		
+"Tajikistan"						142	0.02	9	2803	0.17		
+"Guyana"						144	0.02	13	11175	0.21		
+"Montenegro"						152	0.01	0	2382	0.08		
+"Fiji"						157	0.01	-7	7384	0.12		
+"French Polynesia"						165	0	1	13300	0.24		
+"Saint Lucia"						171	0	-10	5321	0.23		
+"Faroe Islands"						172	0	7	1404	0.27		
+"Palestine, State of"						176	0	8	3026	0.1		
+"Bhutan"						178	0	15	1733	0.63		
+"Greenland"						180	0	6	3482	0.44		
+"Equatorial Guinea"						182	0	2	6008	0.11		
+"Timor-Leste"						183	0	12	3988	0.22		
+"Dominica"						185	0	8	4908	0.65		
+"Free Zones"						186	0	-34		0.92		
+"Bonaire, Sint Eustatius and Saba"						189	0	20		0.19		
+"Comoros"						192	0	18	5731	0.22		
+"South Sudan"						194	0	12		0.25		
+"Saint Vincent and the Grenadines"						196	0	3	6798	0.14		
+"Vanuatu"						198	0	-2	6248	0.13		
+"Tonga"						202	0	4	5771	0.16		
+"Eritrea"						203	0	-8	6303	0.14		
+"Tuvalu"						204	0	17	6386	0.21		
+"Kiribati"						205	0	10	5936	0.13		
+"Cook Islands"						206	0	-4	9417	0.22		
+"Micronesia, Federated States of"						208	0	-8	7109	0.19		
+"Palau"						209	0	1	6232	0.16		
+"Nauru"						211	0	18	6014	0.27		
+"Anguilla"						212	0	-5	4397	0.58		
+"Sint Maarten (Dutch part)"						213	0	-7		0.43		
+"French Southern and Antarctic Territories"						214	0	14		0.12		
+"Saint Pierre and Miquelon"						215	0	10	3489	0.45		
+"Northern Mariana Islands"						216	0	-19	3811	0.2		
+"Wallis and Futuna Islands"						218	0	7	10103	0.24		
+"British Indian Ocean Territory"						219	0	-9		0.67		
+"Christmas Island"						220	0	3		0.69		
+"Western Sahara"						221	0	-16	12469	0.9		
+"Norfolk Island"						222	0	1	5454	0.24		
+"Niue"						223	0	7	11410	0.48		
+"Pitcairn"						227	0	-5		0.23		
+"West Asia not elsewhere specified"						228	0			1		
+"British Antarctic Territory"						229	0			1		
