@@ -1,15 +1,18 @@
-from tkinter.tix import Select
-from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.support.ui import Select
+# from tkinter.tix import Select
+# from selenium import webdriver
+# from selenium.webdriver.support.wait import WebDriverWait
+# from webdriver_manager.chrome import ChromeDriverManager
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support import expected_conditions as ec
+# from selenium.webdriver.support.ui import Select
 
 from os import listdir
-import os.path
 import shutil
 import time
+import numpy as np
+import pandas as pd
+import os
+import networkx as nx
 
 def get_export_files(path: str):
 
@@ -56,3 +59,65 @@ def get_export_files(path: str):
 
     time.sleep(2)
     driver.close()
+    
+
+def read_txt():
+    path = "data/"
+    data = dict()
+
+    for filename in os.listdir(path):
+        country = dict()
+        if filename.endswith(".txt"):
+            with open(path+filename) as f:
+                line = f.readline()
+                while line:
+                    if line[0] == '"':
+                        row = line.split("\t")[:-1]
+                        country[row[0][1:-1]] = row[1:]
+                    line = f.readline()
+
+            data[filename.split('.')[0]] = country
+    return data
+
+def generate_dataframe_from(data, filter_, column_i):
+    rows = []
+    for exporter_k in filter_:
+        exporter = data[exporter_k]
+        row = np.zeros(len(filter_))
+        i = 0
+        for to in filter_:
+            if to in exporter and exporter[to][column_i]:
+                row[i] = float(exporter[to][column_i])
+            i += 1
+        rows.append(row)
+    df = pd.DataFrame(np.array(rows), columns = filter_, index = filter_)
+    df.to_csv('data/filtered.csv')
+    return df
+
+def filter_countries(data, threshold1, threshold2):
+    filter_ = np.zeros(len(data))
+    indexs = np.array(list(data.keys()))
+    for i in range(len(data)):
+        country1 = indexs[i]
+        for j in range(len(data)):
+            country2 = indexs[j]
+            if country2 in data[country1]:
+                row = np.array(data[country1][country2])
+                if len(row[row != '']) >= threshold1:
+                    filter_[i] += 1
+    return indexs[filter_ > threshold2]
+
+def build_graph(df, norm):
+    G = nx.DiGraph()
+    
+    for index, row in df.iterrows():
+        G.add_node(index)
+    
+    columns = df.columns
+    for index, row in df.iterrows():
+        edges = columns[row > 0]
+        weights = row[row > 0] / norm
+        for i in range(len(edges)):
+            G.add_edge(index, edges[i], weight=weights[i])
+    
+    return G
