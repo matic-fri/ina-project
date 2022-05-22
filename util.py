@@ -91,7 +91,7 @@ def generate_dataframe_from(data, filter_, column_i):
             i += 1
         rows.append(row)
     df = pd.DataFrame(np.array(rows), columns = filter_, index = filter_)
-    df.to_csv('data/filtered.csv')
+    df.to_csv('data/filtered.csv', index=True)
     return df
 
 def filter_countries(data, threshold1, threshold2):
