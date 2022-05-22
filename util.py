@@ -87,7 +87,7 @@ def generate_dataframe_from(data, filter_, column_i):
         i = 0
         for to in filter_:
             if to in exporter and exporter[to][column_i]:
-                row[i] = float(exporter[to][column_i])
+                row[i] = float(exporter[to][column_i])*1000
             i += 1
         rows.append(row)
     df = pd.DataFrame(np.array(rows), columns = filter_, index = filter_)
@@ -111,15 +111,12 @@ def build_graph(df, gdp):
     G = nx.DiGraph()
     
     countries = np.intersect1d(df.columns.astype('string'), gdp['Country Name'])
-#     for index, row in df.iterrows():
-#         if len(gdp[gdp['Country Name'] == index]):
-#             G.add_node(index)
     
     for index, row in df[countries].iterrows():        
         norm = gdp[gdp['Country Name'] == index]
         if len(norm):
-            edges = countries[row > 0]
-            weights = row[row > 0] / float(norm["GDP"])
+            edges = countries
+            weights = row / float(norm["GDP"])
             for i in range(len(edges)):
                 G.add_edge(index, edges[i], weight=weights[i])
     
