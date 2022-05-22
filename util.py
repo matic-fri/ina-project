@@ -107,17 +107,20 @@ def filter_countries(data, threshold1, threshold2):
                     filter_[i] += 1
     return indexs[filter_ > threshold2]
 
-def build_graph(df, norm):
+def build_graph(df, gdp):
     G = nx.DiGraph()
     
-    for index, row in df.iterrows():
-        G.add_node(index)
+    countries = np.intersect1d(df.columns.astype('string'), gdp['Country Name'])
+#     for index, row in df.iterrows():
+#         if len(gdp[gdp['Country Name'] == index]):
+#             G.add_node(index)
     
-    columns = df.columns
-    for index, row in df.iterrows():
-        edges = columns[row > 0]
-        weights = row[row > 0] / norm
-        for i in range(len(edges)):
-            G.add_edge(index, edges[i], weight=weights[i])
+    for index, row in df[countries].iterrows():        
+        norm = gdp[gdp['Country Name'] == index]
+        if len(norm):
+            edges = countries[row > 0]
+            weights = row[row > 0] / float(norm["GDP"])
+            for i in range(len(edges)):
+                G.add_edge(index, edges[i], weight=weights[i])
     
     return G
