@@ -107,7 +107,7 @@ def filter_countries(data, threshold1, threshold2):
                     filter_[i] += 1
     return indexs[filter_ > threshold2]
 
-def build_graph(df: pd.DataFrame, gdp: pd.DataFrame) -> nx.DiGraph:
+def build_graph(df: pd.DataFrame, gdp: pd.DataFrame, threshold:float=0.0) -> nx.DiGraph:
     """Build direction weighted graph from export and gdp data."""
     G = nx.DiGraph()
     
@@ -116,8 +116,8 @@ def build_graph(df: pd.DataFrame, gdp: pd.DataFrame) -> nx.DiGraph:
     for index, row in df[countries].iterrows():        
         norm = gdp[gdp['Country Name'] == index]
         if len(norm):
-            edges = countries
-            weights = row / float(norm["GDP"])
+            edges = countries[row > threshold]
+            weights = row[row > threshold] / float(norm["GDP"])
             for i in range(len(edges)):
                 G.add_edge(index, edges[i], weight=weights[i])
     
