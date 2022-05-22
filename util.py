@@ -107,7 +107,8 @@ def filter_countries(data, threshold1, threshold2):
                     filter_[i] += 1
     return indexs[filter_ > threshold2]
 
-def build_graph(df, gdp):
+def build_graph(df: pd.DataFrame, gdp: pd.DataFrame) -> nx.DiGraph:
+    """Build direction weighted graph from export and gdp data."""
     G = nx.DiGraph()
     
     countries = np.intersect1d(df.columns.astype('string'), gdp['Country Name'])
