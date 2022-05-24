@@ -1,5 +1,9 @@
+from cmath import nan
 import geopandas as gpd
 import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import matplotlib as mpl
 
 map_names = {
     'Cyprus': 'N. Cyprus',
@@ -160,3 +164,33 @@ map_names = {
     'Zambia': 'Zambia',
     'Zimbabwe': 'Zimbabwe'
 }
+
+without_countries = ['Antarctica', 'Greenland']
+
+def geoplot_numbers(country_number: dict[str, float], label: str):
+
+    world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+    _, ax = plt.subplots(1, 1, figsize=(10,10), dpi=100)
+    
+    world = world[~world.name.isin(without_countries)]
+    world[label] = [np.nan]*len(world)
+
+    for key, number in country_number.items():
+        if key in map_names:
+            geo_key = map_names[key]
+            world.loc[world['name'] == geo_key, label] = number
+
+    world.plot(
+        column=label, 
+        ax=ax, 
+        legend=True,
+        cmap=mpl.colors.LinearSegmentedColormap.from_list('', ['#c7eaff', '#005588', '#001d2f']),
+        legend_kwds={'label': label, 'orientation': 'horizontal'},
+        missing_kwds={'color': 'lightgrey'}
+    )
+
+    minx, miny, maxx, maxy = world.total_bounds
+    ax.set_xlim(minx, maxx)
+    ax.set_ylim(miny, maxy)
+    
+    ax.set_axis_off()
