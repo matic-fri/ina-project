@@ -66,19 +66,17 @@ def is_weakly_conn(G):
 def clustering_coef(G):
     clust_coeff = nx.clustering(G, weight='weight')
     avg_clust_coeff = nx.average_clustering(G, weight='weight')
-    print("Clustering coefficient: ", clust_coeff)
-    print("\n")
     print("Average clustering coeficient: ", avg_clust_coeff)
     return clust_coeff, avg_clust_coeff
 
 def weighted_centr_measures(G):
     # BETWEEENES
-    betweenes = nx.betweenness_centrality(G, weight='weight', normalized=True)
+    betweenes = nx.betweenness_centrality(G, weight='distance', normalized=True)
     betweenes_sorted = list(map(lambda x: (x, str(betweenes[x])), sorted(betweenes, key= lambda x: float(betweenes[x]), reverse=True)))
     #print("Betweenes centrality: ", betweenes_sorted)
     
     # CLOSENES
-    clossenes = nx.closeness_centrality(G, distance='weight') 
+    clossenes = nx.closeness_centrality(G, distance='distance')
     clossenes_sorted =  list(map(lambda x: (x, str(clossenes[x])), sorted(clossenes, key= lambda x: float(clossenes[x]) , reverse=True))) 
     #print("Clossenes centrality: ", clossenes_sorted)
 
