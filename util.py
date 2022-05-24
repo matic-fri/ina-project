@@ -59,7 +59,7 @@ def get_export_files(path: str):
 
     time.sleep(2)
     driver.close()
-    
+
 
 def read_txt():
     path = "data/"
@@ -122,3 +122,10 @@ def build_graph(df: pd.DataFrame, gdp: pd.DataFrame, threshold:float=0.0) -> nx.
                 G.add_edge(index, edges[i], weight=weights[i])
     
     return G
+
+def print_dict(dictionary: dict[str, float], first_n: int = 10, reverse: bool = True):
+    list = [ (key, dictionary[key]) for key in dictionary ]
+    list.sort(key=lambda x: x[1], reverse=reverse)
+
+    for key, value in list[:first_n]:
+        print('%.5f %s' % (value, key))
