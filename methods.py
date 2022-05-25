@@ -1,13 +1,14 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+import networkx.algorithms.community as nx_comm
 
 # Basic statistic
 def calc_basic_metrics(G):
     # return number of nodes, number of edges, average degree, density
     n = G.number_of_nodes()
     m = G.number_of_edges()
-    avg_deg = 2*m /n
-    density = 2*m/n/(n-1)
+    avg_deg = m /n
+    density = m/n/(n-1)
     print("Nr. of nodes: ", n)
     print("Nr. of edges: ", m)
     print("Average degree: ", avg_deg)
@@ -92,3 +93,7 @@ def weighted_centr_measures(G):
    
     return betweenes, clossenes, in_degree_centrality, out_degree_centrality
     
+# MODULARITY oz. community detection
+# LOUVAIN https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.community.louvain.louvain_communities.html#networkx.algorithms.community.louvain.louvain_communities
+def louvain_community(G):
+    return nx_comm.louvain_communities(G, weight='weight')
