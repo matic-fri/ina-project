@@ -1,9 +1,9 @@
-from cmath import nan
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import matplotlib as mpl
+from sklearn import preprocessing
 
 map_names = {
     'Cyprus': 'N. Cyprus',
@@ -167,10 +167,55 @@ map_names = {
 
 without_countries = ['Antarctica', 'Greenland']
 
+def geoplot_network(export_data: pd.DataFrame, country_data: pd.DataFrame):
+
+    world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+    _, ax = plt.subplots(1, 1, figsize=(20,20), dpi=100)
+
+    world.plot(
+        color='#efefef',
+        edgecolor='#a3a3a3',
+        ax=ax,
+        legend_kwds={'orientation': 'horizontal'},
+    )
+
+    # divide exports with country GDP
+    for export_country, row in export_data.iterrows():
+        for import_country in export_data.columns.values:
+            row = row / float(country_data[country_data['Country Name'] == export_country]['GDP'])
+
+    # normalize export figures into interval [0,1]
+    x = export_data.values
+    min_max_scaler = preprocessing.MinMaxScaler()
+    x_scaled = min_max_scaler.fit_transform(x)
+    export_data = pd.DataFrame(x_scaled, columns=export_data.columns.values, index=export_data.index.values)
+    
+    # draw edges between countries
+    for export_country, row in export_data.iterrows():
+        for import_country in export_data.columns.values:
+            export = row[import_country]
+
+            export_lat = float(country_data[country_data['Country Name'] == export_country]['Latitude'])
+            export_lng = float(country_data[country_data['Country Name'] == export_country]['Longitude'])
+
+            import_lat = float(country_data[country_data['Country Name'] == import_country]['Latitude'])
+            import_lng = float(country_data[country_data['Country Name'] == import_country]['Longitude'])
+
+            linewidth = export * 0.8
+            alpha = export * 0.5
+
+            plt.plot([export_lng, import_lng], [export_lat, import_lat], linewidth=linewidth, alpha=alpha, linestyle='-', color='#316df7')
+
+    minx, miny, maxx, maxy = world.total_bounds
+    ax.set_xlim(minx, maxx)
+    ax.set_ylim(miny, maxy)
+    
+    ax.set_axis_off()
+
 def geoplot_numbers(country_number: dict[str, float], label: str):
 
     world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
-    _, ax = plt.subplots(1, 1, figsize=(10,10), dpi=100)
+    _, ax = plt.subplots(1, 1, figsize=(20,20), dpi=100)
     
     world = world[~world.name.isin(without_countries)]
     world[label] = [np.nan]*len(world)
