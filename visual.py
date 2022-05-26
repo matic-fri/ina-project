@@ -195,16 +195,17 @@ def geoplot_network(export_data: pd.DataFrame, country_data: pd.DataFrame):
         for import_country in export_data.columns.values:
             export = row[import_country]
 
-            export_lat = float(country_data[country_data['Country Name'] == export_country]['Latitude'])
-            export_lng = float(country_data[country_data['Country Name'] == export_country]['Longitude'])
+            if export != 0.0:
+                export_lat = float(country_data[country_data['Country Name'] == export_country]['Latitude'])
+                export_lng = float(country_data[country_data['Country Name'] == export_country]['Longitude'])
 
-            import_lat = float(country_data[country_data['Country Name'] == import_country]['Latitude'])
-            import_lng = float(country_data[country_data['Country Name'] == import_country]['Longitude'])
+                import_lat = float(country_data[country_data['Country Name'] == import_country]['Latitude'])
+                import_lng = float(country_data[country_data['Country Name'] == import_country]['Longitude'])
 
-            linewidth = export * 0.8
-            alpha = export * 0.5
+                linewidth = (export * 0.8) + 0.04
+                alpha = (export * 0.5) + 0.04
 
-            plt.plot([export_lng, import_lng], [export_lat, import_lat], linewidth=linewidth, alpha=alpha, linestyle='-', color='#316df7')
+                plt.plot([export_lng, import_lng], [export_lat, import_lat], linewidth=linewidth, alpha=alpha, linestyle='-', color='#316df7')
 
     minx, miny, maxx, maxy = world.total_bounds
     ax.set_xlim(minx, maxx)
