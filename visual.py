@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import matplotlib as mpl
 from sklearn import preprocessing
+from typing import List, Set
 
 map_names = {
     'Cyprus': 'N. Cyprus',
@@ -240,3 +241,35 @@ def geoplot_numbers(country_number: dict[str, float], label: str):
     ax.set_ylim(miny, maxy)
     
     ax.set_axis_off()
+
+def geoplot_groups(groups: List[Set[str]], label: str):
+
+    world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+    _, ax = plt.subplots(1, 1, figsize=(20,20), dpi=100)
+    
+    world = world[~world.name.isin(without_countries)]
+    world['group'] = [np.nan]*len(world)
+
+    for i, group_set in enumerate(groups):
+        for country in group_set:
+            if country in map_names:
+                geo_key = map_names[country]
+                world.loc[world['name'] == geo_key, 'group'] = i
+
+    world.plot(
+        column='group', 
+        ax=ax, 
+        legend=False,
+        cmap=mpl.colors.LinearSegmentedColormap.from_list('', ['#264653', '#2A9D8F', '#E9C46A', '#F4A261', '#E76F51']),
+        legend_kwds={'label': label, 'orientation': 'horizontal'},
+        missing_kwds={'color': 'lightgrey'}
+    )
+
+    plt.title(label)
+
+    minx, miny, maxx, maxy = world.total_bounds
+    ax.set_xlim(minx, maxx)
+    ax.set_ylim(miny, maxy)
+    
+    ax.set_axis_off()
+
