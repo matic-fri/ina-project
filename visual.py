@@ -171,7 +171,7 @@ without_countries = ['Antarctica', 'Greenland']
 def geoplot_network(export_data: pd.DataFrame, country_data: pd.DataFrame):
 
     world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
-    _, ax = plt.subplots(1, 1, figsize=(20,20), dpi=100)
+    _, ax = plt.subplots(1, 1, figsize=(10,10), dpi=200)
     world = world[~world.name.isin(['Antarctica'])]
 
     world.plot(
@@ -219,7 +219,7 @@ def geoplot_network(export_data: pd.DataFrame, country_data: pd.DataFrame):
 def geoplot_numbers(country_number: dict[str, float], label: str, colors_red: bool = False):
 
     world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
-    _, ax = plt.subplots(1, 1, figsize=(20,20), dpi=100)
+    _, ax = plt.subplots(1, 1, figsize=(10,10), dpi=200)
     
     world = world[~world.name.isin(without_countries)]
     world[label] = [np.nan]*len(world)
@@ -250,7 +250,7 @@ def geoplot_numbers(country_number: dict[str, float], label: str, colors_red: bo
 def geoplot_groups(groups: List[Set[str]], label: str):
 
     world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
-    _, ax = plt.subplots(1, 1, figsize=(20,20), dpi=100)
+    _, ax = plt.subplots(1, 1, figsize=(10,10), dpi=200)
     
     world = world[~world.name.isin(without_countries)]
     world['group'] = [np.nan]*len(world)
@@ -266,16 +266,13 @@ def geoplot_groups(groups: List[Set[str]], label: str):
         ax=ax, 
         legend=False,
         cmap=mpl.colors.LinearSegmentedColormap.from_list('', ['#264653', '#2A9D8F', '#E9C46A', '#F4A261', '#E76F51']),
-        legend_kwds={'label': label, 'orientation': 'horizontal'},
         missing_kwds={'color': 'lightgrey'}
     )
-
-    plt.title(label)
 
     minx, miny, maxx, maxy = world.total_bounds
     ax.set_xlim(minx, maxx)
     ax.set_ylim(miny, maxy)
     
     ax.set_axis_off()
-    plt.savefig("img/communities.png", bbox_inches='tight')
+    plt.savefig("img/%s.png" % label, bbox_inches='tight')
 
