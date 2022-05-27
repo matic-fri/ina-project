@@ -172,6 +172,7 @@ def geoplot_network(export_data: pd.DataFrame, country_data: pd.DataFrame):
 
     world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
     _, ax = plt.subplots(1, 1, figsize=(20,20), dpi=100)
+    world = world[~world.name.isin(['Antarctica'])]
 
     world.plot(
         color='#efefef',
