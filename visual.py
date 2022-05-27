@@ -213,7 +213,7 @@ def geoplot_network(export_data: pd.DataFrame, country_data: pd.DataFrame):
     ax.set_ylim(miny, maxy)
     
     ax.set_axis_off()
-    plt.savefig("img/world_trade_network.png")
+    plt.savefig("img/world_trade_network.png", bbox_inches='tight')
 
 def geoplot_numbers(country_number: dict[str, float], label: str):
 
@@ -242,7 +242,7 @@ def geoplot_numbers(country_number: dict[str, float], label: str):
     ax.set_ylim(miny, maxy)
     
     ax.set_axis_off()
-    plt.savefig("img/%s.png" % label)
+    plt.savefig("img/%s.png" % label, bbox_inches='tight')
 
 def geoplot_groups(groups: List[Set[str]], label: str):
 
@@ -274,5 +274,5 @@ def geoplot_groups(groups: List[Set[str]], label: str):
     ax.set_ylim(miny, maxy)
     
     ax.set_axis_off()
-    plt.savefig("img/communities.png")
+    plt.savefig("img/communities.png", bbox_inches='tight')
 
