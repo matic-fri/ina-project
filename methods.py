@@ -17,43 +17,56 @@ def calc_basic_metrics(G):
 
 
 # OUT - degree distribution
-def get_outdegree_distr(G):
+def get_outdegree_distr(G, n_bins: int = 100):
     nr_of_nodes = G.number_of_nodes()
-    degree_seq = [deg for n, deg in G.out_degree()]
+    degree_seq = [deg for _, deg in G.out_degree(weight='weight')]
+
+    min_degree = min(degree_seq)
+    max_degree = max(degree_seq)
+
     distr = dict()
-    for d in degree_seq:
-        if d in distr:
-            distr[d] += 1
-        else:
-            distr[d] = 1
-    #print(distr)
+    for degree in degree_seq:
+        bin = int(((degree-min_degree)*n_bins) / (max_degree-min_degree))
+        distr[bin] = distr[bin] + 1 if bin in distr else 1
+
     for (k, v) in distr.items():
         distr[k] = v / nr_of_nodes
+
     return distr
 
 
 # IN - degree distribution
-def get_indegree_distr(G):
+def get_indegree_distr(G, n_bins: int = 100):
     nr_of_nodes = G.number_of_nodes()
-    degree_seq = [deg for n, deg in G.in_degree()]
+    degree_seq = [deg for _, deg in G.in_degree(weight='weight')]
+    
+    min_degree = min(degree_seq)
+    max_degree = max(degree_seq)
+
     distr = dict()
-    for d in degree_seq:
-        if d in distr:
-            distr[d] += 1
-        else:
-            distr[d] = 1
-    #print(distr)
+    for degree in degree_seq:
+        bin = int(((degree-min_degree)*n_bins) / (max_degree-min_degree))
+        distr[bin] = distr[bin] + 1 if bin in distr else 1
+
     for (k, v) in distr.items():
         distr[k] = v / nr_of_nodes
+    
     return distr
 
 
-def show_deg_distr(G):
-    distrib_out, distrib_in = get_outdegree_distr(G), get_indegree_distr(G)
-    plt.loglog(distrib_out.keys(), distrib_out.values(), 'ro', markersize=2)
-    plt.loglog(distrib_in.keys(), distrib_in.values(), 'yo', markersize=2)
-    plt.legend(["out-degree", "in-degree"])
-    plt.show()
+def show_deg_distr(G, n_bins: int = 100):
+    distrib_out, distrib_in = get_outdegree_distr(G, n_bins=n_bins), get_indegree_distr(G, n_bins=n_bins)
+    plt.figure(figsize=(10,8), dpi=150)
+
+    plt.loglog(distrib_out.keys(), distrib_out.values(), 'o', alpha=0.5, markersize=4, label='Out-Degree')
+    plt.loglog(distrib_in.keys(), distrib_in.values(), 'o', alpha=0.5, markersize=4, label='In-Degree')
+
+    plt.title('Weighted degree distribution plotted on log–log graph')
+    plt.xlabel('Bin Number')
+    plt.ylabel('Weighted Degree distributions')
+    plt.legend()
+
+    plt.savefig('degree_dist.png', bbox_inches='tight')
     
 def is_weakly_conn(G):
     weakly_conn = nx.is_weakly_connected(G)
