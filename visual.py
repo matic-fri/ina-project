@@ -216,7 +216,7 @@ def geoplot_network(export_data: pd.DataFrame, country_data: pd.DataFrame):
     ax.set_axis_off()
     plt.savefig("img/world_trade_network.png", bbox_inches='tight')
 
-def geoplot_numbers(country_number: dict[str, float], label: str):
+def geoplot_numbers(country_number: dict[str, float], label: str, colors_red: bool = False):
 
     world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
     _, ax = plt.subplots(1, 1, figsize=(20,20), dpi=100)
@@ -229,11 +229,13 @@ def geoplot_numbers(country_number: dict[str, float], label: str):
             geo_key = map_names[key]
             world.loc[world['name'] == geo_key, label] = number
 
+    colors = ['#ff8c8c','#b60000','#8b0000'] if colors_red else ['#c7eaff', '#005588', '#001d2f']
+
     world.plot(
         column=label, 
         ax=ax, 
         legend=True,
-        cmap=mpl.colors.LinearSegmentedColormap.from_list('', ['#c7eaff', '#005588', '#001d2f']),
+        cmap=mpl.colors.LinearSegmentedColormap.from_list('', colors),
         legend_kwds={'label': label, 'orientation': 'horizontal'},
         missing_kwds={'color': 'lightgrey'}
     )
